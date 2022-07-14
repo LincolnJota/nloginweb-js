@@ -1,0 +1,23 @@
+{
+  "name": "nlogin-webjs",
+  "version": "1.2.3",
+  "description": "Easily integrate nLogin into your project!",
+  "main": "index.js",
+  "keywords": [
+    "minecraft integration",
+    "weblogin",
+    "nlogin",
+    "minecraft",
+    "auth",
+    "login"
+  ],
+  "author": "LincolnJota",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/LincolnJota/nlogin",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "mysql": "^2.18.1",
+    "sprintf-js": "^1.1.2",
+    "uniqid": "^5.3.0"
+  }
+}
