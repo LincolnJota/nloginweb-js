@@ -100,7 +100,7 @@ class nLogin {
       callback(result[0] ? result[0].email : null)
     })
   }
-  setEmail(username, email, callback = null) {
+  setEmail(username, email, callback = null) { 
     username = username.trim()
     this.con.query(`UPDATE nlogin SET email = '${email}' WHERE name = '${username.toLowerCase()}'`, (err, result, fields) => {
       if (callback) callback(err == null)
