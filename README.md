@@ -62,4 +62,4 @@ nloginInstance.isIpRegistered("ad.dr.es.s",  (isRegistered)=>{
 nloginInstance.changePassword("newPassword",  "XtiagodinisX", callback /*Optional*/)
 ```
 #
-<span style="color:red">Nota final: O código vai ser refatorado e organizado da forma que eu achar melhor, de forma que aos poucos o projeto fique independente e não mais um fork.</span>
+<span style="color:red">Note: The code will be refactored and organized as I see fit, so that little by little the project becomes independent and no longer a fork.</span>

@@ -1,5 +1,5 @@
 {
-  "name": "nlogin-webjs",
+  "name": "nloginweb-js",
   "version": "1.2.3",
   "description": "Easily integrate nLogin into your project!",
   "main": "index.js",
