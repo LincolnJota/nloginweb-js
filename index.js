@@ -42,7 +42,7 @@ class nLogin {
           var isValid = algorithm.isValid(password, hash);
           callback(isValid)
         } catch (error) {
-          console.log('Aconteceu um erro! ' + error.message);
+          console.log('An error has occurred! ' + error.message);
           callback(false);
         }
       } else {
@@ -52,10 +52,10 @@ class nLogin {
   }
 
   /**
-   * Retorna o algoritmo usado na senha.
+   * Returns the algorithm used in the password.
    *
-   * @param {string} hashed_pass Senha criptografada.
-   * @return {any} Retorna o algoritmo usado. Se for desconhecido ou não suportado, retorna null.
+   * @param {string} hashed_pass Encrypted password.
+   * @return {any} Returns the algorithm used. If unknown or unsupported, throws an Error.
    */
   detectAlgorithm(hashed_pass) {
     var algo = (hashed_pass.includes("$") ? hashed_pass.split("$")[1] : '').toUpperCase();
@@ -63,14 +63,6 @@ class nLogin {
       case '2':
       case '2A':
         return this.bcrypt;
-
-      case "PBKDF2":
-        // will be added
-        throw new Error("PBKDF2 is not supported yet");
-
-      case "ARGON2I":
-        // will be added
-        throw new Error("ARGON2I is not supported yet");
 
       case "SHA256":
         return this.sha256;
@@ -80,9 +72,17 @@ class nLogin {
 
       case "SHA":
         return this.authme;
+        
+      case "PBKDF2":
+        // will be added
+        throw new Error("PBKDF2 is not supported yet");
+
+      case "ARGON2I":
+        // will be added
+        throw new Error("ARGON2I is not supported yet");
 
       default:
-        throw new Error("Unknown algorithm");
+        throw new Error("Unsupported algorithm \"" algo + "\"!");
     }
   }
   hash(passwd) {
